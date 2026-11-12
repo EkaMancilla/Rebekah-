@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kenya Math Quest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-badge">KM</div>
+          <div>
+            <p class="eyebrow">Kenya Learning Club</p>
+            <h1>Kenya Math Quest</h1>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="#scoreboard">Scoreboard</a>
+          <a href="#practice">Practice</a>
+          <a href="#certificate">Certificate</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow accent">Build confidence in math</p>
+            <h2>Practice the math that matters most for Kenyan students.</h2>
+            <p class="lead">
+              Strengthen your skills in addition, subtraction, multiplication,
+              division, square roots, percentages, ratios, and daily-life
+              conversions. Every correct answer boosts your score.
+            </p>
+            <div class="hero-actions">
+              <button id="startButton" class="primary-btn">Start a quiz</button>
+              <a href="#scoreboard" class="secondary-btn">View scoreboard</a>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <p class="section-label">Your progress</p>
+            <div class="stat-grid">
+              <div class="mini-stat">
+                <span class="stat-number" id="bestScoreStat">0</span>
+                <span class="stat-label">Best score</span>
+              </div>
+              <div class="mini-stat">
+                <span class="stat-number" id="averageStat">0%</span>
+                <span class="stat-label">Average</span>
+              </div>
+              <div class="mini-stat">
+                <span class="stat-number" id="attemptsStat">0</span>
+                <span class="stat-label">Attempts</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="scoreboard" class="scoreboard-section">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow accent">Score timeline</p>
+              <h3>Score collected over time</h3>
+            </div>
+            <div class="score-pill" id="overallScorePill">0/10</div>
+          </div>
+
+          <div class="scoreboard-panel">
+            <div class="score-bars" id="scoreBars"></div>
+            <div class="history-list" id="historyList"></div>
+          </div>
+        </section>
+
+        <section id="practice" class="quiz-section">
+          <div class="quiz-shell hidden" id="quizShell">
+            <div class="quiz-header">
+              <div>
+                <p class="eyebrow accent">Quiz challenge</p>
+                <h3>10-question practice round</h3>
+              </div>
+              <div class="progress-box">
+                <span id="questionCounter">Question 1</span>
+              </div>
+            </div>
+
+            <div class="question-card">
+              <div class="topic-badge" id="topicBadge">Addition</div>
+              <h4 id="questionText">Question text</h4>
+              <div class="answer-row">
+                <input
+                  id="answerInput"
+                  type="number"
+                  step="any"
+                  placeholder="Type your answer"
+                  autocomplete="off"
+                />
+                <button id="submitAnswer" class="primary-btn">Check</button>
+              </div>
+              <p id="feedback" class="feedback" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="welcome-card" id="welcomeCard">
+            <div class="starter-box">
+              <label for="studentName">Student name</label>
+              <input id="studentName" type="text" value="Student" maxlength="30" />
+            </div>
+            <p>
+              Ready to sharpen your math skills? Each round has 10 questions, and
+              every correct answer adds points to your scoreboard.
+            </p>
+            <button id="beginQuiz" class="primary-btn">Begin practice</button>
+          </div>
+        </section>
+
+        <section id="certificate" class="certificate-section hidden" aria-live="polite">
+          <div class="certificate-card" id="certificateCard">
+            <div class="certificate-header">
+              <div>
+                <p class="eyebrow accent">Achievement</p>
+                <h3>Certificate of Completion</h3>
+              </div>
+              <span class="stamp" id="certificateStamp">Ready</span>
+            </div>
+
+            <div class="certificate-body">
+              <p>This certifies that</p>
+              <h4 id="certificateName">Student</h4>
+              <p>completed a 10-question math practice quiz with</p>
+              <h2 id="certificateScore">0/10</h2>
+              <p id="certificateMessage">
+                You have worked hard and shown steady progress.
+              </p>
+            </div>
+
+            <div class="certificate-actions">
+              <button id="restartQuiz" class="primary-btn">Try another round</button>
+              <button id="downloadCert" class="secondary-btn">Download certificate</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="confettiLayer" aria-hidden="true"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
